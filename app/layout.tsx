@@ -1,37 +1,39 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
+import type { Metadata } from 'next'
+import { Geist, Geist_Mono } from 'next/font/google'
+import './globals.css'
+import Navbar from '@/components/Navbar'
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+})
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
-  title: "আর্থিক ড্যাশবোর্ড | Financial Management System",
-  description: "A comprehensive Bengali-English bilingual financial management system",
-  creator: "Riyad Hossain Huzaifa",
-};
+  title: 'আর্থিক ব্যবস্থাপনা | Financial Management System - RIYAD HOSSAIN HUZAIFA',
+  description: 'একটি আধুনিক এবং সম্পূর্ণ আর্থিক ব্যবস্থাপনা অ্যাপ্লিকেশন - Created by RIYAD HOSSAIN HUZAIFA',
+  keywords: 'financial management, আর্থিক ব্যবস্থাপনা, RIYAD HOSSAIN HUZAIFA',
+  authors: [{ name: 'RIYAD HOSSAIN HUZAIFA' }],
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-950 dark:via-blue-950 dark:to-purple-950`}>
+    <html lang="bn">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Navbar />
-        <main className="min-h-screen">
-          {children}
-        </main>
+        {children}
+        <footer className="text-center py-4 text-sm text-muted-foreground border-t mt-12">
+          <p>© 2025 Financial Management System - Created by <strong>RIYAD HOSSAIN HUZAIFA</strong></p>
+        </footer>
       </body>
     </html>
-  );
+  )
 }
