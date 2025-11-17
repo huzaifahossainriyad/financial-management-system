@@ -1,3 +1,12 @@
+/**
+ * Financial Management System - Navigation
+ * Created by: Riyad Hossain Huzaifa
+ * Date: November 2025
+ * 
+ * Navigation Component
+ * Main navigation bar for the application
+ */
+
 'use client'
 
 import Link from 'next/link'
@@ -16,7 +25,7 @@ const navItems = [
   { href: '/tips', label: 'টিপস', icon: Lightbulb },
 ]
 
-export default function Navigation() {
+export function Navigation() {
   const pathname = usePathname()
 
   return (
