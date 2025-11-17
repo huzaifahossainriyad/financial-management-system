@@ -7,7 +7,9 @@
  * Complete Bengali-English translations for the entire application
  */
 
-export const translations = {
+export type Language = 'en' | 'bn'
+
+export const translations: Record<Language, Record<string, string>> = {
   en: {
     // Navigation
     dashboard: 'Dashboard',
@@ -140,4 +142,4 @@ export const translations = {
     noBudgets: 'এখনও কোনো বাজেট নেই',
     overBudget: 'বাজেট অতিক্রম',
   },
-};
+}
