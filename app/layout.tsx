@@ -1,17 +1,6 @@
-/**
- * Financial Management System
- * Created by: Riyad Hossain Huzaifa
- * Date: November 2025
- * 
- * Main Layout Component
- * Provides the root layout for the entire application
- */
-
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/navbar";
-import { LanguageProvider } from "@/lib/language-context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "আর্থিক ড্যাশবোর্ড | Financial Management System",
-  description: "A comprehensive Bengali-English bilingual financial management system with advanced animations",
+  description: "A comprehensive Bengali-English bilingual financial management system",
   creator: "Riyad Hossain Huzaifa",
 };
 
@@ -37,12 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <LanguageProvider>
-          <Navbar />
-          <main className="min-h-screen bg-background">
-            {children}
-          </main>
-        </LanguageProvider>
+        {children}
       </body>
     </html>
   );
