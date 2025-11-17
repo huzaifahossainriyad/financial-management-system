@@ -81,8 +81,8 @@
 
 1. **রিপোজিটরি ক্লোন করুন:**
 ```bash
-git clone https://github.com/yourusername/financial-management.git
-cd financial-management
+git clone https://github.com/huzaifahossainriyad/financial-management-system.git
+cd financial-management-system
 ```
 
 2. **নির্ভরতা ইনস্টল করুন:**
@@ -125,7 +125,7 @@ http://localhost:3000
 ## 📁 প্রজেক্ট স্ট্রাকচার
 
 ```
-financial-management/
+financial-management-system/
 ├── app/                      # Next.js app directory
 │   ├── page.tsx             # Dashboard
 │   ├── transactions/        # Transactions page
@@ -214,5 +214,6 @@ financial-management/
 
 **লাইভ ডেমো:** https://financial-management.lindy.site
 
-**তৈরি করেছেন:** Sabbir Khan
+**তৈরি করেছেন:** Riyad Hossain Huzaifa
 **তৈরির তারিখ:** November 2025
+**সংস্করণ:** 1.0.0

@@ -1,3 +1,12 @@
+/**
+ * Financial Management System - Translations
+ * Created by: Riyad Hossain Huzaifa
+ * Date: November 2025
+ * 
+ * Bilingual Translation System
+ * Complete Bengali-English translations for the entire application
+ */
+
 export const translations = {
   en: {
     // Navigation
@@ -18,76 +27,52 @@ export const translations = {
     monthlyTarget: 'Monthly Target',
     savingsRate: 'Savings Rate',
     lastUpdated: 'Last Updated',
+    budgetSummary: 'Budget Summary',
+    alerts: 'Alerts',
+    quickStats: 'Quick Stats',
     recentTransactions: 'Recent Transactions',
-    manageYourFinances: 'Manage your finances with ease',
+    allYourTransactions: 'All your transactions',
+    noTransactions: 'No transactions yet',
+    loading: 'Loading...',
 
     // Transactions
-    manageIncomeExpenses: 'Manage your income and expenses',
+    manageTransactions: 'Manage your income and expenses',
     addTransaction: 'Add Transaction',
-    transactionName: 'Transaction Name',
-    amount: 'Amount',
-    type: 'Type',
-    category: 'Category',
-    date: 'Date',
     income: 'Income',
     expense: 'Expense',
-    save: 'Save',
-    cancel: 'Cancel',
-    delete: 'Delete',
-    edit: 'Edit',
-    noTransactions: 'No transactions yet',
+    type: 'Type',
+    category: 'Category',
+    description: 'Description',
+    enterDescription: 'Enter description',
+    amount: 'Amount',
+    date: 'Date',
+    add: 'Add',
+    selectCategory: 'Select a category',
 
     // Categories
-    organizeTransactions: 'Organize your transactions',
+    manageCategories: 'Manage your transaction categories',
     addCategory: 'Add Category',
-    categoryName: 'Category Name',
+    name: 'Name',
+    enterCategoryName: 'Enter category name',
+    emoji: 'Emoji',
     color: 'Color',
-    icon: 'Icon',
-    deleteCategory: 'Delete Category',
+    expenseCategories: 'Expense Categories',
+    incomeCategories: 'Income Categories',
     noCategories: 'No categories yet',
 
     // Budgets
-    setTrackSpending: 'Set and track your spending limits',
+    manageBudgets: 'Create and manage your monthly budgets',
     addBudget: 'Add Budget',
     budgetName: 'Budget Name',
-    budgetLimit: 'Budget Limit',
+    enterBudgetName: 'Enter budget name',
+    limit: 'Limit',
+    totalBudget: 'Total Budget',
     spent: 'Spent',
-    remaining: 'Remaining',
+    percentage: 'Percentage',
+    yourBudgets: 'Your Budgets',
+    trackYourBudgets: 'Track your budgets',
     noBudgets: 'No budgets yet',
-    overBudget: 'Over Budget!',
-
-    // Analytics
-    deepAnalysis: 'Deep financial data analysis',
-    keyMetrics: 'Key Metrics',
-    averageTransaction: 'Average Transaction',
-    highestTransaction: 'Highest Transaction',
-    totalTransactions: 'Total Transactions',
-    categoryBreakdown: 'Category Breakdown',
-    monthlyTrends: 'Monthly Trends',
-
-    // Reports
-    generateDownload: 'Generate and download detailed reports',
-    downloadReport: 'Download Report',
-    month: 'Month',
-    year: 'Year',
-    summary: 'Summary',
-
-    // Goals
-    setTrackObjectives: 'Set and track financial objectives',
-    addGoal: 'Add Goal',
-    goalName: 'Goal Name',
-    targetAmount: 'Target Amount',
-    deadline: 'Deadline',
-    progress: 'Progress',
-    noGoals: 'No goals yet',
-
-    // Tips
-    savingsTips: 'Money-Saving Tips',
-    expertAdvice: 'Expert advice to help you save more',
-    easy: 'Easy',
-    medium: 'Medium',
-    hard: 'Hard',
-    savings: 'Savings',
+    overBudget: 'Over Budget',
   },
   bn: {
     // Navigation
@@ -108,77 +93,51 @@ export const translations = {
     monthlyTarget: 'মাসিক লক্ষ্য',
     savingsRate: 'সঞ্চয়ের হার',
     lastUpdated: 'সর্বশেষ আপডেট',
+    budgetSummary: 'বাজেট সারসংক্ষেপ',
+    alerts: 'সতর্কতা',
+    quickStats: 'দ্রুত পরিসংখ্যান',
     recentTransactions: 'সাম্প্রতিক লেনদেন',
-    manageYourFinances: 'আপনার আর্থিক ব্যবস্থাপনা করুন',
+    allYourTransactions: 'আপনার সমস্ত লেনদেন',
+    noTransactions: 'এখনও কোনো লেনদেন নেই',
+    loading: 'লোড হচ্ছে...',
 
     // Transactions
-    manageIncomeExpenses: 'আপনার আয় এবং খরচ পরিচালনা করুন',
+    manageTransactions: 'আপনার আয় এবং খরচ পরিচালনা করুন',
     addTransaction: 'লেনদেন যোগ করুন',
-    transactionName: 'লেনদেনের নাম',
-    amount: 'পরিমাণ',
-    type: 'ধরন',
-    category: 'ক্যাটাগরি',
-    date: 'তারিখ',
     income: 'আয়',
     expense: 'খরচ',
-    save: 'সংরক্ষণ করুন',
-    cancel: 'বাতিল করুন',
-    delete: 'মুছুন',
-    edit: 'সম্পাদনা করুন',
-    noTransactions: 'এখনও কোনো লেনদেন নেই',
+    type: 'ধরন',
+    category: 'ক্যাটাগরি',
+    description: 'বর্ণনা',
+    enterDescription: 'বর্ণনা লিখুন',
+    amount: 'পরিমাণ',
+    date: 'তারিখ',
+    add: 'যোগ করুন',
+    selectCategory: 'একটি ক্যাটাগরি নির্বাচন করুন',
 
     // Categories
-    organizeTransactions: 'আপনার লেনদেন সংগঠিত করুন',
+    manageCategories: 'আপনার লেনদেন ক্যাটাগরি পরিচালনা করুন',
     addCategory: 'ক্যাটাগরি যোগ করুন',
-    categoryName: 'ক্যাটাগরির নাম',
+    name: 'নাম',
+    enterCategoryName: 'ক্যাটাগরির নাম লিখুন',
+    emoji: 'ইমোজি',
     color: 'রঙ',
-    icon: 'আইকন',
-    deleteCategory: 'ক্যাটাগরি মুছুন',
+    expenseCategories: 'খরচ ক্যাটাগরি',
+    incomeCategories: 'আয় ক্যাটাগরি',
     noCategories: 'এখনও কোনো ক্যাটাগরি নেই',
 
     // Budgets
-    setTrackSpending: 'আপনার খরচের সীমা নির্ধারণ এবং ট্র্যাক করুন',
+    manageBudgets: 'আপনার মাসিক বাজেট তৈরি এবং পরিচালনা করুন',
     addBudget: 'বাজেট যোগ করুন',
     budgetName: 'বাজেটের নাম',
-    budgetLimit: 'বাজেটের সীমা',
-    spent: 'খরচ হয়েছে',
-    remaining: 'বাকি',
+    enterBudgetName: 'বাজেটের নাম লিখুন',
+    limit: 'সীমা',
+    totalBudget: 'মোট বাজেট',
+    spent: 'খরচ করা হয়েছে',
+    percentage: 'শতাংশ',
+    yourBudgets: 'আপনার বাজেট',
+    trackYourBudgets: 'আপনার বাজেট ট্র্যাক করুন',
     noBudgets: 'এখনও কোনো বাজেট নেই',
-    overBudget: 'বাজেট অতিক্রম করেছে!',
-
-    // Analytics
-    deepAnalysis: 'গভীর আর্থিক ডেটা বিশ্লেষণ',
-    keyMetrics: 'মূল মেট্রিক্স',
-    averageTransaction: 'গড় লেনদেন',
-    highestTransaction: 'সর্বোচ্চ লেনদেন',
-    totalTransactions: 'মোট লেনদেন',
-    categoryBreakdown: 'ক্যাটাগরি বিভাজন',
-    monthlyTrends: 'মাসিক প্রবণতা',
-
-    // Reports
-    generateDownload: 'বিস্তারিত রিপোর্ট তৈরি এবং ডাউনলোড করুন',
-    downloadReport: 'রিপোর্ট ডাউনলোড করুন',
-    month: 'মাস',
-    year: 'বছর',
-    summary: 'সারসংক্ষেপ',
-
-    // Goals
-    setTrackObjectives: 'আর্থিক উদ্দেশ্য নির্ধারণ এবং ট্র্যাক করুন',
-    addGoal: 'লক্ষ্য যোগ করুন',
-    goalName: 'লক্ষ্যের নাম',
-    targetAmount: 'লক্ষ্য পরিমাণ',
-    deadline: 'সময়সীমা',
-    progress: 'অগ্রগতি',
-    noGoals: 'এখনও কোনো লক্ষ্য নেই',
-
-    // Tips
-    savingsTips: 'অর্থ সাশ্রয়ের টিপস',
-    expertAdvice: 'আরও সাশ্রয় করতে বিশেষজ্ঞ পরামর্শ',
-    easy: 'সহজ',
-    medium: 'মাঝারি',
-    hard: 'কঠিন',
-    savings: 'সাশ্রয়',
+    overBudget: 'বাজেট অতিক্রম',
   },
-}
-
-export type Language = 'en' | 'bn'
+};

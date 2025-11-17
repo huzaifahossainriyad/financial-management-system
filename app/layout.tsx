@@ -1,28 +1,49 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import Navigation from '@/components/navigation'
+/**
+ * Financial Management System
+ * Created by: Riyad Hossain Huzaifa
+ * Date: November 2025
+ * 
+ * Main Layout Component
+ * Provides the root layout for the entire application
+ */
 
-const inter = Inter({ subsets: ['latin'] })
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import { Navigation } from "@/components/navigation";
+import { LanguageProvider } from "@/lib/language-context";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: 'Financial Management System',
-  description: 'Manage your finances with ease',
-}
+  title: "আর্থিক ড্যাশবোর্ড | Financial Management System",
+  description: "A comprehensive Bengali-English bilingual financial management system with advanced animations",
+  creator: "Riyad Hossain Huzaifa",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navigation />
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {children}
-        </main>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <LanguageProvider>
+          <Navigation />
+          <main className="min-h-screen bg-background">
+            {children}
+          </main>
+        </LanguageProvider>
       </body>
     </html>
-  )
+  );
 }
