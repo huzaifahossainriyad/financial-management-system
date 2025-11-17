@@ -1,11 +1,40 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { Menu, X, LogOut, User } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [userName, setUserName] = useState('')
+  const router = useRouter()
+
+  useEffect(() => {
+    // Check if user is logged in
+    const loggedIn = localStorage.getItem('isLoggedIn') === 'true'
+    const email = localStorage.getItem('userEmail') || ''
+    const name = localStorage.getItem('userName') || ''
+    
+    setIsLoggedIn(loggedIn)
+    setUserName(name)
+
+    // If not logged in, redirect to login page
+    if (!loggedIn && typeof window !== 'undefined') {
+      const currentPath = window.location.pathname
+      if (currentPath !== '/auth/login') {
+        router.push('/auth/login')
+      }
+    }
+  }, [router])
+
+  const handleLogout = () => {
+    localStorage.removeItem('isLoggedIn')
+    localStorage.removeItem('userEmail')
+    localStorage.removeItem('userName')
+    router.push('/auth/login')
+  }
 
   const navItems = [
     { label: 'ড্যাশবোর্ড', href: '/', icon: '📊' },
@@ -15,6 +44,10 @@ export default function Navbar() {
     { label: 'বিশ্লেষণ', href: '/analytics', icon: '📈' },
     { label: 'রিপোর্ট', href: '/reports', icon: '📄' },
   ]
+
+  if (!isLoggedIn) {
+    return null
+  }
 
   return (
     <nav className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white shadow-lg sticky top-0 z-50">
@@ -40,6 +73,21 @@ export default function Navbar() {
             ))}
           </div>
 
+          {/* User Profile and Logout */}
+          <div className="hidden md:flex items-center gap-4">
+            <div className="flex items-center gap-2 px-3 py-2 bg-white/10 rounded-lg">
+              <User size={18} />
+              <span className="text-sm font-medium capitalize">{userName}</span>
+            </div>
+            <button
+              onClick={handleLogout}
+              className="px-4 py-2 bg-red-500 hover:bg-red-600 rounded-lg transition-colors flex items-center gap-2 text-sm font-medium"
+            >
+              <LogOut size={18} />
+              লগআউট
+            </button>
+          </div>
+
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -63,6 +111,22 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
+            <div className="border-t border-white/20 pt-2 mt-2">
+              <div className="flex items-center gap-2 px-3 py-2 bg-white/10 rounded-lg mb-2">
+                <User size={18} />
+                <span className="text-sm font-medium capitalize">{userName}</span>
+              </div>
+              <button
+                onClick={() => {
+                  handleLogout()
+                  setIsOpen(false)
+                }}
+                className="w-full px-3 py-2 bg-red-500 hover:bg-red-600 rounded-lg transition-colors flex items-center gap-2 text-sm font-medium"
+              >
+                <LogOut size={18} />
+                লগআউট
+              </button>
+            </div>
           </div>
         )}
       </div>
