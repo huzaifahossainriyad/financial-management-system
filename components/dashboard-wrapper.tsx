@@ -1,25 +1,37 @@
 /**
- * Dashboard Wrapper Component
+ * Financial Management System - Dashboard Wrapper
+ * Created by: Riyad Hossain Huzaifa
+ * Date: November 2025
  * 
- * This wrapper ensures Dashboard is only rendered on the client side
- * to avoid hydration mismatches with the LanguageProvider context
+ * Dashboard Wrapper Component
+ * Wraps dashboard content with animations and layout
  */
 
 'use client'
 
-import { Dashboard } from './dashboard'
-import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
+import DashboardContent from './dashboard-content'
 
 export function DashboardWrapper() {
-  const [mounted, setMounted] = useState(false)
+  return (
+    <motion.div
+      className="min-h-screen bg-gradient-to-br from-background via-background to-muted p-4 md:p-8"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="max-w-6xl mx-auto space-y-8">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h1 className="text-4xl font-bold text-foreground mb-2">আর্থিক ড্যাশবোর্ড</h1>
+          <p className="text-muted-foreground">আপনার আর্থিক অবস্থা এক নজরে দেখুন</p>
+        </motion.div>
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    return null
-  }
-
-  return <Dashboard />
+        <DashboardContent />
+      </div>
+    </motion.div>
+  )
 }
